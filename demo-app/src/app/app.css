@@ -1,0 +1,37 @@
+:root {
+  --primary-color: #6d28d9; /* Deep purple */
+}
+
+.site-header {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 0;
+}
+
+.brand-logo {
+  width: 40px;
+  height: 40px;
+}
+
+.brand-title {
+  margin: 0;
+}
+
+.brand-nav a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.site-main {
+  padding-bottom: 40px;
+}
+
+.site-footer {
+  margin-top: 32px;
+  border-top: 1px solid rgba(0,0,0,0.1);
+  padding: 16px 0;
+  color: #6b7280;
+}

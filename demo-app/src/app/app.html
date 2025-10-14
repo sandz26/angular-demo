@@ -1,6 +1,20 @@
 
-<img class="brand-logo" src="logo.svg" alt="logo" aria-hidden="true" />
-    
+<header class="site-header">
+  <img class="brand-logo" src="logo.svg" alt="Angular logo" />
+  <h1 class="brand-title">Housing Listings</h1>
+  <nav class="brand-nav" aria-label="Primary">
+    <a href="#home">Home</a>
+  </nav>
+  
+</header>
 
-<h1><app-home></app-home></h1>
-<router-outlet />
+<main class="site-main" id="home">
+  <app-home />
+  <router-outlet />
+</main>
+
+<footer class="site-footer">
+  <p>
+    © {{ currentYear }} Demo Housing · Built with Angular
+  </p>
+</footer>
