@@ -1,7 +1,23 @@
-<p>home works!Thanks lord!</p>
- <section>
-      <form>
-        <input type="text" placeholder="Filter by city" />
-        <button class="primary" type="button">Search</button>
-      </form>
-    </section>
+<section class="hero">
+  <h2>Find your next place</h2>
+  <p class="subtitle">Browse featured housing across the country.</p>
+  <form class="search-form" (submit)="$event.preventDefault()">
+    <input
+      type="text"
+      placeholder="Filter by city or state"
+      [value]="filterTerm()"
+      (input)="onFilterChange(($any($event.target)).value)"
+      aria-label="Filter by city or state"
+    />
+    <button class="primary" type="button" (click)="onFilterChange(filterTerm())">Search</button>
+  </form>
+</section>
+
+<section class="results" aria-live="polite">
+  @for (loc of filteredHousingLocations(); track loc.id) {
+    <app-housing-location [housingLocation]="loc" />
+  }
+  @empty {
+    <p class="muted">No results found. Try another city or state.</p>
+  }
+</section>

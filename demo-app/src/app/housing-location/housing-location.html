@@ -1,1 +1,18 @@
-<p>housing-location works!</p>
+<article class="housing-card">
+  <img class="housing-photo" [src]="housingLocation.photo" [alt]="housingLocation.name" />
+  <div class="housing-content">
+    <header>
+      <h3 class="housing-title">{{ housingLocation.name }}</h3>
+      <p class="housing-location">{{ housingLocation.city }}, {{ housingLocation.state }}</p>
+    </header>
+
+    <ul class="amenities">
+      <li><span class="dot" [class.on]="housingLocation.wifi"></span> Wi‑Fi</li>
+      <li><span class="dot" [class.on]="housingLocation.laundry"></span> Laundry</li>
+    </ul>
+
+    <p class="availability">
+      <strong>{{ housingLocation.availableUnits }}</strong> unit(s) available
+    </p>
+  </div>
+</article>
