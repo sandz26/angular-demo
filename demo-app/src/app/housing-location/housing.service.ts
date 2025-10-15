@@ -9,7 +9,7 @@ export class HousingService {
       name: 'Sunset Villas',
       city: 'San Diego',
       state: 'CA',
-      photo: 'https://placehold.co/600x400?text=Sunset+Villas',
+      photo: '',
       availableUnits: 3,
       wifi: true,
       laundry: true,
